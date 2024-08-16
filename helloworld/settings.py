@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'django_sso.sso_service',
 ]
 
-# LOGIN_URL = 'http://localhost:8000/accounts/login/'
-LOGOUT_REDIRECT_URL = 'http://localhost:8000/accounts/logout/'
+LOGIN_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 SESSION_COOKIE_AGE = 1209600  # Two weeks
