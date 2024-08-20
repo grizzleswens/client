@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hello',
     'django_sso.sso_service',
+    'django_extensions',
 ]
 
 LOGIN_URL = '/'
@@ -52,7 +53,7 @@ SSO = {
     'ROOT': 'http://127.0.0.1:8000/',
     
 	# Specify application token obtained in the SSO server admin panel (REQUIRED)
-	'TOKEN': 'PbC71bj1LK3iArAjC8Dd3qZAXDG4299b2F0HgKOocZANzm0CT0pVGPbCrMFNgNlsg0cDhbRETDE4dGfrimKnJXoxzAFbF9GQMvCL0Ixww4SA0QdGcdXbxos16GlauArS',
+	'TOKEN': 'Qtvk5ECBC4wzv7IeIFW32Tr5GaFKxNLNIjURlr024r0Qx8rudRmg4YqmUJKs41mhGFLfxIsDwyl5WM2ZI7MgAW1NNYrqg7Y0SPcmD6LXS8WkQmgGT5x9qliPkVfzghBG',
 
 }
 
