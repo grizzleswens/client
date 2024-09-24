@@ -1,0 +1,20 @@
+<form method="{{ method|default:'post' }}" action="{{ action|default:'' }}" class="{{ form_class|default:'form' }}">
+    {% csrf_token %}
+
+    {% for field in form %}
+        <div class="form-group">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+            {% if field.help_text %}
+                <small class="form-text text-muted">{{ field.help_text }}</small>
+            {% endif %}
+            {% for error in field.errors %}
+                <div class="invalid-feedback">{{ error }}</div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+    <button type="submit" class="{{ button_class|default:'btn btn-primary' }}">
+        {{ button_text|default:'Submit' }}
+    </button>
+</form>

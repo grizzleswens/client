@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'hello',
     'django_sso.sso_service',
     'django_extensions',
+    'django_components',
 ]
 
 LOGIN_URL = '/'
@@ -57,6 +59,14 @@ SSO = {
 
 }
 
+STATICFILES_FINDERS = [
+    # Default finders
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+    # Django components
+    "django_components.finders.ComponentsFileSystemFinder",
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -68,12 +78,19 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'helloworld.urls'
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+COMPONENTS = {
+    "dirs": [
+         os.path.join(BASE_DIR, "components"),
+     ],
+}
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, "components"),],
+
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -81,6 +98,19 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins': [
+                'django_components.templatetags.component_tags',
+            ],
+            'loaders':[(
+               'django.template.loaders.cached.Loader', [
+                  # Default Django loader
+                  'django.template.loaders.filesystem.Loader',
+                  # Inluding this is the same as APP_DIRS=True
+                  'django.template.loaders.app_directories.Loader',
+                  # Components loader
+                  'django_components.template_loader.Loader',
+               ]
+            )],
         },
     },
 ]
