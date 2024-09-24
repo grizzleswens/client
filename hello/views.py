@@ -29,7 +29,20 @@ def hello_world(request):
     })
 
 def django_components(request):
-    return render(request, 'django_components.html')
+    
+    if request.method == 'POST':
+        form = BasicForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            print(name, username, password)
+            # Process the data (e.g., save to the database)
+            return redirect('home')
+    else:
+        form = BasicForm()
+
+    return render(request, 'django_components.html', {'form': form})
 
 def view_component(request):
     return render(request, 'view_component.html')

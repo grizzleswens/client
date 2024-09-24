@@ -1,0 +1,23 @@
+
+<form method="post" class=" form-component needs-validation" novalidate>
+    {% csrf_token %}
+    <div class="form-group">
+        {% for field in form %}
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            <input type="{{ field.field.widget.input_type }}" 
+                   name="{{ field.name }}" 
+                   id="{{ field.id_for_label }}" 
+                   class="form-control" 
+                   value="{{ field.value|default_if_none:'' }}" 
+                   {% if field.field.widget.attrs %}{{ field.field.widget.attrs|safe }}{% endif %}>
+            {% if field.help_text %}
+                <small class="form-text text-muted">{{ field.help_text }}</small>
+            {% endif %}
+            {% for error in field.errors %}
+                <div class="invalid-feedback">{{ error }}</div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
