@@ -15,5 +15,5 @@ class Button(Component):
 
     # Media for CSS and JavaScript
     class Media:
-        css = "button/style.css"
+        css = "style.css"
         js = "script.js"
