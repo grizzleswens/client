@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_sso.sso_service',
     'django_extensions',
     'django_components',
+    'django_viewcomponent',
 ]
 
 LOGIN_URL = '/'
@@ -89,7 +90,10 @@ COMPONENTS = {
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "components"),],
+        'DIRS': [
+                os.path.join(BASE_DIR, "components"),
+                 BASE_DIR / 'viewcomponents',
+                 ],
 
         'OPTIONS': {
             'context_processors': [
@@ -109,6 +113,7 @@ TEMPLATES = [
                   'django.template.loaders.app_directories.Loader',
                   # Components loader
                   'django_components.template_loader.Loader',
+                'django_viewcomponent.loaders.ComponentLoader',
                ]
             )],
         },
