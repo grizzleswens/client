@@ -1,0 +1,8 @@
+<div class="email-input-container">
+    <label for="{{ name|default:'email' }}" class="email-label">{{ label|default:'Email' }}</label>
+    <input type="email" name="{{ name|default:'email' }}" 
+           id="{{ name|default:'email' }}" 
+           class="email-input" 
+           placeholder="{{ placeholder|default:'Enter your email' }}" 
+           value="{{ value|default:'' }}" />
+</div>

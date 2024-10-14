@@ -1,0 +1,8 @@
+<div class="checkbox-input-container">
+    <input type="checkbox" name="{{ name|default:'checkbox' }}" 
+           id="{{ name|default:'checkbox' }}" 
+           class="checkbox-input" 
+           value="{{ value|default:'1' }}" 
+           {% if checked %}checked{% endif %} />
+    <label for="{{ name|default:'checkbox' }}" class="checkbox-label">{{ label|default:'Check this box' }}</label>
+</div>
