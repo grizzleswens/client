@@ -8,3 +8,4 @@ class ExampleComponent(component.Component):
 
     def __init__(self, **kwargs):
         self.label = kwargs['label']
+        self.btnclass = kwargs['btnclass']
