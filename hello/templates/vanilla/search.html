@@ -1,0 +1,11 @@
+<div class="search-input-container">
+    <label for="{{ name|default:'search' }}" class="search-label">{{ label|default:'Search' }}</label>
+    <div class="search-wrapper">
+        <input type="text" name="{{ name|default:'search' }}" 
+               id="{{ name|default:'search' }}" 
+               class="search-input" 
+               placeholder="{{ placeholder|default:'Type here to search' }}" 
+               value="{{ value|default:'' }}" />
+        <button type="submit" class="search-button">{{ button_text|default:'Search' }}</button>
+    </div>
+</div>

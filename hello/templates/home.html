@@ -59,9 +59,12 @@
                 <br>
                 {% include 'vanilla/number.html' with name='quantity' label='Quantity' placeholder='Enter the quantity' min='1' max='100' %}
                 {% include 'vanilla/radio.html' with name='gender' label='Gender' options=radio_options %}
-
-
-
+                {% include 'vanilla/search.html' with name="search_query" placeholder="Search here..." label="Search" button_text="Go" %}
+                {% include 'vanilla/submit.html' with label="Submit Your Information" button_text="Register" %}
+                {% include 'vanilla/text.html' with name="user_name" label="Your Name" placeholder="Enter your name" %}
+                <br>
+                {% include 'vanilla/Structural/card.html' with title="Welcome!" content="This is a simple card component." button_text="Learn More" button_url="/learn-more" %}
+                {% include 'vanilla/Structural/section.html' with title="About Us" description="Learn more about our mission and values." content="<p>We are committed to providing the best services to our customers. Our values include integrity, excellence, and teamwork.</p>" button_text="Read More" button_url="/about" %}
 
 
 

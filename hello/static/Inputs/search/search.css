@@ -1,0 +1,48 @@
+/* Container styles */
+.search-input-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+/* Label styles */
+.search-label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Search wrapper to group input and button */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Input field styles */
+.search-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button styles */
+.search-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Input hover and focus effects */
+.search-input:hover, .search-input:focus, 
+.search-button:hover, .search-button:focus {
+    border-color: #666;
+    outline: none;
+}

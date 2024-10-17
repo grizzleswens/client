@@ -1,0 +1,29 @@
+/* Container styles */
+.text-input-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+/* Label styles */
+.text-label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input field styles */
+.text-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Input hover and focus effects */
+.text-input:hover, .text-input:focus {
+    border-color: #666;
+    outline: none;
+}

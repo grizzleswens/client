@@ -1,0 +1,8 @@
+<div class="text-input-container">
+    <label for="{{ name|default:'text' }}" class="text-label">{{ label|default:'Enter Text' }}</label>
+    <input type="text" name="{{ name|default:'text' }}" 
+           id="{{ name|default:'text' }}" 
+           class="text-input" 
+           placeholder="{{ placeholder|default:'Type here...' }}" 
+           value="{{ value|default:'' }}" />
+</div>

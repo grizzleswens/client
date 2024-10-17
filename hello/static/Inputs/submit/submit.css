@@ -1,0 +1,31 @@
+/* Container styles */
+.submit-button-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+/* Label styles */
+.submit-label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Button styles */
+.submit-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    background-color: #28a745; /* Green background */
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Button hover and focus effects */
+.submit-button:hover, .submit-button:focus {
+    background-color: #218838; /* Darker green on hover */
+    border-color: #1e7e34; /* Darker border on hover */
+    outline: none;
+}
