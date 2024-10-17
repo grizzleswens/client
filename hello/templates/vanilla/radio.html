@@ -1,14 +1,7 @@
-<div class="radio-input-container">
-    <label class="radio-label">{{ label|default:'Choose an option' }}</label>
-    <div class="radio-options">
-        {% for option in options %}
-            <div class="radio-option">
-                <input type="radio" name="{{ name|default:'radio' }}" 
-                       id="{{ name|default:'radio' }}_{{ forloop.counter }}" 
-                       value="{{ option.value }}" 
-                       {% if option.checked %}checked{% endif %}>
-                <label for="{{ name|default:'radio' }}_{{ forloop.counter }}">{{ option.label }}</label>
-            </div>
-        {% endfor %}
+{% for option in radio_options %}
+    <div class="radio-option">
+        <input type="radio" id="{{ option.value }}" name="gender" value="{{ option.value }}" 
+               {% if option.checked %}checked{% endif %}>
+        <label for="{{ option.value }}">{{ option.label }}</label>
     </div>
-</div>
+{% endfor %}

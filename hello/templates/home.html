@@ -58,7 +58,7 @@
                 {% include 'vanilla/file.html' with name='upload_file' label='Choose a file to upload' %}
                 <br>
                 {% include 'vanilla/number.html' with name='quantity' label='Quantity' placeholder='Enter the quantity' min='1' max='100' %}
-                
+                {% include 'vanilla/radio.html' with name='gender' label='Gender' options=radio_options %}
 
 
 
