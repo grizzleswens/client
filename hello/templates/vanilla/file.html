@@ -1,0 +1,7 @@
+<div class="file-input-container">
+    <label for="{{ name|default:'file' }}" class="file-label">{{ label|default:'Upload File' }}</label>
+    <input type="file" name="{{ name|default:'file' }}" 
+           id="{{ name|default:'file' }}" 
+           class="file-input" />
+    <div class="file-placeholder">{{ placeholder|default:'' }}</div>
+</div>

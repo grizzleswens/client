@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,6 +55,11 @@
                 {% include 'vanilla/email.html' with name='user_email' placeholder='Email Address' label='Your Email' %}
                 {% include 'vanilla/password.html' with name='user_password' placeholder='Password' label='Your Password' %}
                 {% include 'vanilla/checkbox.html' with name='agree_terms' label='I agree to the terms and conditions' checked=true %}
+                {% include 'vanilla/file.html' with name='upload_file' label='Choose a file to upload' %}
+                <br>
+                {% include 'vanilla/number.html' with name='quantity' label='Quantity' placeholder='Enter the quantity' min='1' max='100' %}
+                
+
 
 
 

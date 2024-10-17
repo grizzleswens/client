@@ -1,0 +1,31 @@
+/* Container styles */
+.radio-input-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+/* Label styles */
+.radio-label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Radio options container */
+.radio-options {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Each radio option */
+.radio-option {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for radio inputs */
+.radio-option input[type="radio"] {
+    margin-right: 10px;
+}

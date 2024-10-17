@@ -7,6 +7,12 @@ import logging
 from .forms import BasicForm
 
 def hello_world(request):
+    
+    radio_options = [
+        {'value': 'male', 'label': 'Male', 'checked': True},
+        {'value': 'female', 'label': 'Female'},
+        {'value': 'other', 'label': 'Other'}
+    ]
     if request.method == 'POST':
         form = BasicForm(request.POST)
         if form.is_valid():
