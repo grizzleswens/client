@@ -1,0 +1,15 @@
+/* main.css */
+@import url('Inputs/checkbox/checkbox.css');
+@import url('Inputs/email/email.css');
+@import url('Inputs/password/password.css');
+@import url('Inputs/radio/radio.css');
+@import url('Inputs/text/text.css');
+@import url('Inputs/file/file.css');
+@import url('Inputs/submit/submit.css');
+@import url('Inputs/number/number.css');
+@import url('Inputs/radio/radio.css');
+@import url('Inputs/search/search.css');
+
+
+@import url('Structural/card/card.css');
+@import url('Structural/section/section.css');

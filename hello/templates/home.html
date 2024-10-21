@@ -1,19 +1,18 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanilla Components</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'hello\static\Inputs\email\email.css' %}">
-    <script src="{% static 'hello\static\Inputs\email\email.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'hello\static\Inputs' %}">
-    <script src="{% static 'hello\static\Inputs' %}"></script>
-
-
+    <!-- Link to your static CSS file -->
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <!-- Link to your static JavaScript file -->
+    <script src="{% static 'hello/static/Inputs/email/email.js' %}"></script>
 </head>
+
 <body>
 
 <!-- Navbar -->
