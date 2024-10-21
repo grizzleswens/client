@@ -47,20 +47,20 @@
             <div class="col-md-8 text-center">
                 <h1>Vanilla Components</h1>
                 <br>
-                {% include 'vanilla/button.html' %}
-                {% include 'vanilla/button.html' with url="example.com" style_class="btn-primary" %}
-                {% include 'vanilla/form.html' with form=form %}
+                {% include 'vanilla/Input/button.html' %}
+                {% include 'vanilla/Input/button.html' with url="example.com" style_class="btn-primary" %}
+                {% include 'vanilla/Input/form.html' with form=form %}
 
-                {% include 'vanilla/email.html' with name='user_email' placeholder='Email Address' label='Your Email' %}
-                {% include 'vanilla/password.html' with name='user_password' placeholder='Password' label='Your Password' %}
-                {% include 'vanilla/checkbox.html' with name='agree_terms' label='I agree to the terms and conditions' checked=true %}
-                {% include 'vanilla/file.html' with name='upload_file' label='Choose a file to upload' %}
+                {% include 'vanilla/Input/email.html' with name='user_email' placeholder='Email Address' label='Your Email' %}
+                {% include 'vanilla/Input/password.html' with name='user_password' placeholder='Password' label='Your Password' %}
+                {% include 'vanilla/Input/checkbox.html' with name='agree_terms' label='I agree to the terms and conditions' checked=true %}
+                {% include 'vanilla/Input/file.html' with name='upload_file' label='Choose a file to upload' %}
                 <br>
-                {% include 'vanilla/number.html' with name='quantity' label='Quantity' placeholder='Enter the quantity' min='1' max='100' %}
-                {% include 'vanilla/radio.html' with name='gender' label='Gender' options=radio_options %}
-                {% include 'vanilla/search.html' with name="search_query" placeholder="Search here..." label="Search" button_text="Go" %}
-                {% include 'vanilla/submit.html' with label="Submit Your Information" button_text="Register" %}
-                {% include 'vanilla/text.html' with name="user_name" label="Your Name" placeholder="Enter your name" %}
+                {% include 'vanilla/Input/number.html' with name='quantity' label='Quantity' placeholder='Enter the quantity' min='1' max='100' %}
+                {% include 'vanilla/Input/radio.html' with name='gender' label='Gender' options=radio_options %}
+                {% include 'vanilla/Input/search.html' with name="search_query" placeholder="Search here..." label="Search" button_text="Go" %}
+                {% include 'vanilla/Input/submit.html' with label="Submit Your Information" button_text="Register" %}
+                {% include 'vanilla/Input/text.html' with name="user_name" label="Your Name" placeholder="Enter your name" %}
                 <br>
                 {% include 'vanilla/Structural/card.html' with title="Welcome!" content="This is a simple card component." button_text="Learn More" button_url="/learn-more" %}
                 {% include 'vanilla/Structural/section.html' with title="About Us" description="Learn more about our mission and values." content="<p>We are committed to providing the best services to our customers. Our values include integrity, excellence, and teamwork.</p>" button_text="Read More" button_url="/about" %}
